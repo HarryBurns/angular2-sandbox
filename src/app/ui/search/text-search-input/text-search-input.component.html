@@ -1,0 +1,27 @@
+<form>
+
+  <p>Search text input component</p>
+
+  <mat-form-field>
+    <mat-label>Search</mat-label>
+    <input matInput
+           type="search"
+           (ngModelChange)="onSearchQueryChange($event)"
+           [(ngModel)]="searchQuery"
+           name="searchQuery">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+
+  <div>
+    <mat-radio-group (ngModelChange)="onSearchEngineChange($event)"
+                     [(ngModel)]="selectedSearchEngine"
+                     name="searchEngine">
+
+      <mat-radio-button *ngFor="let engine of engines" [value]="engine.id">
+        {{engine.name}}
+      </mat-radio-button>
+
+    </mat-radio-group>
+  </div>
+
+</form>

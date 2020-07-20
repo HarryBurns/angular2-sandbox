@@ -1,0 +1,25 @@
+<form>
+
+  <p>Search image input component</p>
+
+  <div>
+    <input #imageInput
+           type="file"
+           accept="image/*"
+           (change)="processFile(imageInput)"
+           name="searchQuery">
+  </div>
+
+  <div>
+    <mat-radio-group (ngModelChange)="onSearchEngineChange($event)"
+                     [(ngModel)]="selectedSearchEngine"
+                     name="searchEngine">
+
+      <mat-radio-button *ngFor="let engine of engines" [value]="engine.id">
+        {{engine.name}}
+      </mat-radio-button>
+
+    </mat-radio-group>
+  </div>
+
+</form>
