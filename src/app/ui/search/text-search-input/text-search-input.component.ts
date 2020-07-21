@@ -19,13 +19,11 @@ export class TextSearchInputComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.selectedSearchEngine = this.searchDataProvider.selectedSearchEngine.getValue();
     this.searchDataProvider.selectedSearchEngine
       .subscribe(value => {
         this.selectedSearchEngine = value;
       });
 
-    this.searchQuery = this.searchDataProvider.searchQuery.getValue();
     this.searchDataProvider.searchQuery
       .subscribe(value => {
         this.searchQuery = value;

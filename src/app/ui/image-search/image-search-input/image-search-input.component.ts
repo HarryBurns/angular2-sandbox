@@ -20,13 +20,11 @@ export class ImageSearchInputComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.selectedSearchEngine = this.searchDataProvider.selectedSearchEngine.getValue();
     this.searchDataProvider.selectedSearchEngine
       .subscribe(value => {
         this.selectedSearchEngine = value;
       });
 
-    this.searchImage = this.searchDataProvider.searchImage.getValue();
     this.searchDataProvider.searchImage
       .subscribe(value => {
         this.searchImage = value;

@@ -34,5 +34,6 @@ export class ImageSearchDataProviderService extends SearchDataProviderService {
 }
 
 export class ImageSnippet {
-  constructor(public src: string, public file: File) {}
+  constructor(public src: string, public file: File) {
+  }
 }
