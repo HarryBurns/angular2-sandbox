@@ -17,13 +17,11 @@ export class ImageSearchResultsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.selectedSearchEngineName = this.getSearchEngineName(this.searchDataProvider.selectedSearchEngine.getValue());
     this.searchDataProvider.selectedSearchEngine
       .subscribe(value => {
         this.selectedSearchEngineName = this.getSearchEngineName(value);
       });
 
-    this.searchImage = this.searchDataProvider.searchImage.getValue();
     this.searchDataProvider.searchImage
       .subscribe(value => {
         this.searchImage = value;

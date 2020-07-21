@@ -10,8 +10,7 @@ export class ImageSearchDataProviderService extends SearchDataProviderService {
   constructor() {
     super();
 
-    this.searchEngines.concat([
-      {
+    this.searchEngines.push({
         id: 'baidu',
         name: 'Baidu',
         route: 'baidu',
@@ -28,8 +27,7 @@ export class ImageSearchDataProviderService extends SearchDataProviderService {
         name: 'Yandex',
         route: 'yandex',
         getSearchUrl: (query) => `https://yandex.com/search/?text=${query}`
-      }
-    ]);
+      });
   }
 }
 

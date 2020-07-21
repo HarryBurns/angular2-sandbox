@@ -16,25 +16,7 @@ export class SearchDataProviderService {
       name: 'Bing',
       route: 'bing',
       getSearchUrl: (query) => `https://www.bing.com/search?q=${query}`
-    },
-    // {
-    //   id: 'baidu',
-    //   name: 'Baidu',
-    //   route: 'baidu',
-    //   getSearchUrl: (query) => `http://www.baidu.com/s?wd=${query}`
-    // },
-    // {
-    //   id: 'yahoo',
-    //   name: 'Yahoo',
-    //   route: 'yahoo',
-    //   getSearchUrl: (query) => `https://search.yahoo.com/search?p=${query}`
-    // },
-    // {
-    //   id: 'yandex',
-    //   name: 'Yandex',
-    //   route: 'yandex',
-    //   getSearchUrl: (query) => `https://yandex.com/search/?text=${query}`
-    // }
+    }
   ];
 
   public readonly selectedSearchEngine = new BehaviorSubject<SearchEngine>(this.searchEngines[0].id);
