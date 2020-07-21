@@ -15,7 +15,6 @@ export class GoogleSearchResultsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.searchQuery = this.searchDataProvider.searchQuery.getValue();
     this.searchDataProvider.searchQuery
       .subscribe(value => {
         this.searchQuery = value;
